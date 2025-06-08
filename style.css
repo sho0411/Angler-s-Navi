@@ -524,3 +524,60 @@ div h1 a{
   line-height: 1.6;
   color: #333;
 }
+
+nav a.active {
+  color: #e88e00;;      /* 目立つ青色 */
+  font-weight: bold;   /* 太字 */
+  pointer-events: none; /* クリックできなくする */
+  cursor: default;     /* カーソル変えない */
+}
+
+/* ハンバーガーボタン */
+/* PCでは非表示 */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* スマホでは表示 */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  #nav-menu {
+    display: none;
+    width: 100%;
+  }
+
+  #nav-menu.open {
+    display: block;
+  }
+
+  #nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    background-color: #1e3d59;
+    padding: 0;
+    margin: 0;
+  }
+
+  #nav-menu ul li {
+    border-top: 1px solid #ccc;
+    text-align: left;
+    padding: 10px 20px;
+  }
+
+  .header-wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

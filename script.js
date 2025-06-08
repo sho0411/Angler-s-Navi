@@ -1,3 +1,21 @@
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM読み込み完了!");  // ← これで読み込みチェック
+
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  if (hamburger && navMenu) {
+    console.log("ハンバーガーとメニュー取得成功");
+
+    hamburger.addEventListener('click', () => {
+      console.log("ハンバーガークリック!");
+      navMenu.classList.toggle('open');
+    });
+  } else {
+    console.log("hamburgerかnavMenuが見つかりません");
+  }
+});
+
 document.getElementById("weather-form").addEventListener("submit", async function (e) {
   e.preventDefault();
   const city = document.getElementById("city").value.trim();
