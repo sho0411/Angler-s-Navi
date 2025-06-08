@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>天気検索</title>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+  <header>
+  <div class="header-wrapper">
+    <h1><a href="index.html">Angler's Navi</a></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="about.html">Angler's Naviとは</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section class="search-container">
+      <h1>釣行ポイントの天気を検索</h1>
+      <form id="weather-form" method="get">
+        <input type="text" id="city" name="city" placeholder="ポイントを検索_(例：平戸市)" />
+        <button type="submit">検索</button>
+      </form>
+    </section>
+
+    <section id="search-results" style="display:none;">
+      <h2>検索結果</h2>
+      <div id="weather-cards" class="weather-card-container"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
