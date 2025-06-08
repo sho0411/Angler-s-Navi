@@ -1,18 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM読み込み完了!");  // ← これで読み込みチェック
+  const hamburgers = document.getElementsByClassName('hamburger');
+  const navMenus = document.getElementsByClassName('nav-menu');
 
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('nav-menu');
+  for (let i = 0; i < hamburgers.length; i++) {
+    const hamburger = hamburgers[i];
+    const navMenu = navMenus[i];
 
-  if (hamburger && navMenu) {
-    console.log("ハンバーガーとメニュー取得成功");
-
-    hamburger.addEventListener('click', () => {
-      console.log("ハンバーガークリック!");
-      navMenu.classList.toggle('open');
-    });
-  } else {
-    console.log("hamburgerかnavMenuが見つかりません");
+    if (hamburger && navMenu) {
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+      });
+    }
   }
 });
 

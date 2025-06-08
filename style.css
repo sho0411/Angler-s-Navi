@@ -552,16 +552,16 @@ nav a.active {
     cursor: pointer;
   }
 
-  #nav-menu {
+  .nav-menu {
     display: none;
     width: 100%;
   }
 
-  #nav-menu.open {
+  .nav-menu.open {
     display: block;
   }
 
-  #nav-menu ul {
+  .nav-menu ul {
     display: flex;
     flex-direction: column;
     background-color: #1e3d59;
@@ -569,7 +569,7 @@ nav a.active {
     margin: 0;
   }
 
-  #nav-menu ul li {
+  .nav-menu ul li {
     border-top: 1px solid #ccc;
     text-align: left;
     padding: 10px 20px;
@@ -579,5 +579,70 @@ nav a.active {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: #f9f9f9;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 28px;
+  color: #1e3d59;
+}
+
+.contact-form label {
+  font-weight: 600;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #1e3d59;
+  outline: none;
+}
+
+.contact-form button {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  padding: 14px;
+  font-size: 16px;
+  background-color: #1e3d59;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #163047;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-container {
+    margin: 20px;
+    padding: 24px;
   }
 }

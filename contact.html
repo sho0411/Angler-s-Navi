@@ -1,11 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お問い合わせフォーム</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>お問い合わせ - Angler's Navi</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>お問い合わせフォームです</h1>
+  <header>
+    <div class="header-wrapper">
+      <h1><a href="index.html">Angler's Navi</a></h1>
+      <button class="hamburger">&#9776;</button>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="index.html">Angler's Naviとは</a></li>
+          <li><a href="search.html">天気検索</a></li>
+          <li><a href="contact.html" class="active">お問い合わせ</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-container">
+      <h2>お問い合わせ</h2>
+      <form class="contact-form">
+        <label for="name">お名前</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">メールアドレス</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">お問い合わせ内容</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">送信する</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Angler's Navi</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
