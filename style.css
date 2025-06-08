@@ -541,18 +541,17 @@ nav a.active {
 /* PCでは非表示 */
 .hamburger {
   display: none;
-  font-size: 24px;
+  font-size: 2em;
   cursor: pointer;
   color: white;
 }
 
 /* スマホでは表示 */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .hamburger {
     display: block;
-    font-size: 24px;
+    font-size: 30px;
     background: none;
-    border: none;
     color: white;
     cursor: pointer;
   }
@@ -560,6 +559,7 @@ nav a.active {
   .nav-menu {
     display: none;
     width: 100%;
+    right: 0; 
   }
 
   .nav-menu.open {
@@ -576,9 +576,8 @@ nav a.active {
   }
 
   .nav-menu ul li {
-    border-top: 1px solid #ccc;
     text-align: center;
-    padding: 10px 20px;
+    padding: 7px 20px;
   }
 
   .header-wrapper {
