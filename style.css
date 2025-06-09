@@ -651,8 +651,8 @@ nav a.active {
   transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
-  background-color: #163047;
+.contact-container button:hover {
+  background-color: #1582e1;
 }
 
 @media screen and (max-width: 600px) {
@@ -660,4 +660,41 @@ nav a.active {
     margin: 20px;
     padding: 24px;
   }
+}
+
+.thanks-container {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 40px;
+  background-color: #f0f8ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.thanks-container h1 {
+  font-size: 2rem;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.thanks-container p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.back-to-home {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #0077b6;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-home:hover {
+  background-color: #005f87;
 }
