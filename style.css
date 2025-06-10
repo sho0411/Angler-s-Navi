@@ -267,6 +267,7 @@ div h1 a {
   margin-bottom: 20px;
   border-left: 4px solid #3f80ea;
   padding-left: 12px;
+  text-align: center;
 }
 
 .features-list,
