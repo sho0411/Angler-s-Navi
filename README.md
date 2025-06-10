@@ -22,6 +22,7 @@
 - OpenWeatherMap API
 - Tide736 API
 - Netlify（デプロイ）
+- Formspree(お問合せフォームの送信)
 
 ---
 
