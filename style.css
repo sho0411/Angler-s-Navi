@@ -260,14 +260,14 @@ div h1 a {
 }
 
 .features-section h2 {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: bold;
   color: #1a1a1a;
   margin-top: 60px;
   margin-bottom: 20px;
   border-left: 4px solid #3f80ea;
   padding-left: 12px;
-  text-align: center;
+  text-align: left;
 }
 
 .features-list,
@@ -282,7 +282,7 @@ div h1 a {
   position: relative;
   padding-left: 1em;
   margin-bottom: 12px;
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.6;
 }
 
@@ -329,6 +329,7 @@ div h1 a {
   color: #1a1a1a;
   margin-bottom: 12px;
   margin-top: 30px;
+  text-align: center;
 }
 
 .cta p {
