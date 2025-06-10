@@ -1,4 +1,4 @@
-/* 全html共通部分 */
+/* html共通部分 */
 body {
   font-family: "Helvetica Neue", sans-serif;
   margin: 0;
@@ -60,7 +60,7 @@ nav a:hover {
 
 nav a.active {
   color: #e88e00;
-  pointer-events: none; 
+  pointer-events: none;
   cursor: default;
 }
 
@@ -73,15 +73,28 @@ footer {
   font-size: 0.9rem;
 }
 
-div h1 a{
+div h1 a {
   text-decoration: none;
 }
 
 /* ロゴ画像のスタイル追加 */
 .logo-icon {
-  height: 50px; 
-  vertical-align: middle; /* 画像を縦中央揃えに設定 */
-  margin-right: 5px; /* 文字との間に余白 */
+  height: 50px;
+  vertical-align: middle;
+  /* 画像を縦中央揃えに設定 */
+  margin-right: 5px;
+  /* 文字との間に余白 */
+}
+
+.hero-button {
+  display: inline-block;
+  background-color: #ff9800;
+  color: #fff;
+  padding: 15px 60px;
+  font-size: 1.5em;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
@@ -132,18 +145,8 @@ div h1 a{
   color: #1e3d59;
 }
 
-.hero a{
+.hero a {
   margin-top: 30px;
-}
-
-.hero button {
-  background-color: #ff9800;
-  color: #fff;
-  border: none;
-  padding: 15px 30px;
-  font-size: 1em;
-  cursor: pointer;
-  border-radius: 5px;
 }
 
 /* アプリ紹介セクション */
@@ -161,13 +164,43 @@ div h1 a{
   text-align: center;
 }
 
-.info-section ul{
+.info-section ul {
   font-size: 1.3em;
-  text-align: left; 
-  list-style-position: inside; 
-  padding-left: 0; 
-  margin: 0 auto; 
+  text-align: left;
+  list-style-position: inside;
+  padding-left: 0;
+  margin: 0 auto;
   max-width: 800px;
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 1rem;
+    margin-top: 50px;
+  }
+
+  .hero .hero-button {
+    padding: 10px 40px;
+    font-size: 1.0rem;
+  }
+
+  .info-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .info-section ul {
+    font-size: 0.6rem;
+    text-align: left;
+    list-style-position: inside;
+    padding-left: 0;
+    margin: 0 auto;
+  }
+
+  .developer-info p {
+    font-size: 0.7rem;
+  }
 }
 
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
@@ -221,7 +254,8 @@ div h1 a{
 
 .features-section {
   width: 100%;
-  padding: 80px 0;  /* ← 左右の余白をなくす */
+  padding: 80px 0;
+  /* ← 左右の余白をなくす */
   background-color: #fff;
 }
 
@@ -293,6 +327,7 @@ div h1 a{
   font-weight: bold;
   color: #1a1a1a;
   margin-bottom: 12px;
+  margin-top: 30px;
 }
 
 .cta p {
@@ -327,10 +362,6 @@ div h1 a{
 }
 
 @media (max-width: 768px) {
-  #about .container {
-    flex-direction: column;
-    padding: 40px 20px;
-  }
 
   #about .about-image img {
     width: 100%;
@@ -340,14 +371,27 @@ div h1 a{
   }
 
   #about .about-text h2 {
-    font-size: 2.2rem;
+    font-size: 2.0rem;
     text-align: center;
   }
 
   #about .about-text p {
-    font-size: 1.1rem;
+    font-size: 0.7rem;
     max-width: 100%;
     text-align: center;
+  }
+
+  #features-section h2 {
+    font-size: 1.5rem;
+  }
+
+  #features-section li {
+    font-size: 0.8rem;
+  }
+
+  .cta .hero-button {
+    padding: 10px 40px;
+    font-size: 1.0rem;
   }
 }
 
@@ -424,12 +468,12 @@ div h1 a{
   margin: 70px auto;
 }
 
-.search-container h1{
+.search-container h1 {
   text-align: center;
 }
 
 .search-container form {
-  margin-top: 40px ;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -476,7 +520,7 @@ div h1 a{
     flex-direction: column;
     overflow-y: auto;
     display: flex;
-    z-index: 1000; 
+    z-index: 1000;
   }
 
   .nav-menu.open {
@@ -515,7 +559,7 @@ div h1 a{
   background: #f9f9f9;
   padding: 40px;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
 }
 
@@ -615,62 +659,3 @@ div h1 a{
 }
 
 /* ================================================== */
-
-
-
-/* 
-
-.daily-group {
-  margin-bottom: 40px;
-}
-
-.daily-group h2 {
-  font-size: 1.5rem;
-  margin-bottom: 12px;
-  color: #1e3d59;
-}
-
-.card-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-}
-
-.forecast-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 15px;
-  width: 140px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-  text-align: center;
-  flex-shrink: 0;
-}
-
-.forecast-card img {
-  width: 60px;
-  height: 60px;
-}
-
-.forecast-card p {
-  margin: 6px 0;
-  font-size: 0.95rem;
-  color: #333;
-}
-
-@media (max-width: 768px) {
-  #city-input {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .forecast-card {
-    width: 120px;
-  }
-
-  .card-row {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-  }
-} */
