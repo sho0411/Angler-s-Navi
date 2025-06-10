@@ -93,13 +93,8 @@ nav a:hover {
   color: #1e3d59;
 }
 
-.hero p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-  color: #333;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+.hero a{
+  margin-top: 30px;
 }
 
 .hero button {
@@ -122,8 +117,17 @@ nav a:hover {
 }
 
 .info-section h3 {
-  font-size: 1.8em;
+  font-size: 2.2em;
   margin-bottom: 20px;
+}
+
+.info-section ul{
+  font-size: 1.3em;
+  text-align: center; /* ← テキスト中央揃え */
+  list-style-position: inside; /* ← 箇条書きの●をテキストの内側に */
+  padding-left: 0; /* ← 左の余白を削除 */
+  margin: 0 auto; /* ← 要素自体を中央に */
+  max-width: 800px; 
 }
 
 /* フッター */
