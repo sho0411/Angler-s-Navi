@@ -699,8 +699,10 @@ nav a.active {
   background-color: #005f87;
 }
 
-/* ロゴ画像のサイズ調整 */
+/* ロゴ画像のスタイル追加 */
 .logo-icon {
-  height: 50px; /* テキストと同じくらいの高さに合わせる */
-  width: auto;
+  height: 50px; 
+  vertical-align: middle; /* 画像を中央揃えに設定 */
+  margin-right: 5px; /* 文字との間に余白 */
+
 }
