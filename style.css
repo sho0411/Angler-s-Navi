@@ -698,3 +698,9 @@ nav a.active {
 .back-to-home:hover {
   background-color: #005f87;
 }
+
+/* ロゴ画像のサイズ調整 */
+.logo-icon {
+  height: 50px; /* テキストと同じくらいの高さに合わせる */
+  width: auto;
+}
