@@ -706,3 +706,8 @@ nav a.active {
   margin-right: 5px; /* 文字との間に余白 */
 
 }
+
+.contact-container button a{
+  color: #fff;
+  text-decoration: none;
+}

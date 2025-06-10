@@ -23,11 +23,6 @@
           <li><a href="search.html">天気検索</a></li>
           <li><a href="contact.html" class="active">お問い合わせ</a></li>
         </ul>
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
       </nav>
     </div>
   </header>
@@ -35,7 +30,9 @@
   <main>
     <section class="contact-container">
       <h2>お問い合わせ</h2>
-      <form class="contact-form" action="https://formspree.io/f/mzzgedab" method="post" onsubmit="location.href='thanks.html'; return false;">
+      <form class="contact-form" id="contact-form" action="https://formspree.io/f/mzzgedab" method="post">
+        <input type="hidden" name="_next" value="https://cozy-lokum-aee2cd.netlify.app/thanks.html" />
+        
         <label for="name">お名前</label>
         <input type="text" id="name" name="name" required />
 
