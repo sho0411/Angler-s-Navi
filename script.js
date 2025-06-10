@@ -18,8 +18,8 @@ document.getElementById("weather-form").addEventListener("submit", async functio
   e.preventDefault();
 
   const city = document.getElementById("city").value.trim();
-  const weatherApiKey = "504b3fc6fd4a78eb428714b8393715dd"; // OpenWeatherMap用
-  const tideApiKey = "1d5de4a3-9442-4d11-a5f5-c787875807cb"; // ← ここにあなたのWorldTides APIキーを入力
+  const weatherApiKey = "504b3fc6fd4a78eb428714b8393715dd";
+  const tideApiKey = "1d5de4a3-9442-4d11-a5f5-c787875807cb";
 
   const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${encodeURIComponent(city)}&appid=${weatherApiKey}&units=metric&lang=ja`;
 
@@ -57,6 +57,17 @@ function findClosestTide(extremes, targetDateTimeStr) {
 
   return closest;
 }
+
+// ★ 天気の自然な表現マップ（日本語description用）
+const weatherDescriptionMap = {
+  "適度な雨": "雨",
+  "厚い雲": "曇り",
+  "曇りがち": "曇り時々晴れ",
+  "晴天": "快晴",
+  "晴れがち": "晴れ時々曇り",
+  "雷雨": "雷を伴う雨",
+  "弱い雪": "小雪",
+};
 
 function displayWeatherAndTide(weatherData, tideData) {
   const container = document.getElementById("weather-cards");
@@ -96,23 +107,27 @@ function displayWeatherAndTide(weatherData, tideData) {
       const time = new Date(item.dt_txt).getHours();
       const iconUrl = `https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`;
 
-      // 風向きを角度から方位へ変換
+      // 風向き変換
       const directions = ['北', '北北東', '北東', '東北東', '東', '東南東', '南東', '南南東',
                           '南', '南南西', '南西', '西南西', '西', '西北西', '北西', '北北西'];
       const deg = item.wind.deg;
       const dirIndex = Math.round(deg / 22.5) % 16;
       const windDir = directions[dirIndex];
 
-      // 潮汐データから最も近い満潮/干潮を探す
+      // 潮汐の取得
       const closestTide = findClosestTide(tideData.extremes, item.dt_txt);
       const tideLabel = closestTide
         ? `${new Date(closestTide.date).getHours()}時 ${closestTide.type === "High" ? "満潮" : "干潮"}`
         : "潮情報なし";
 
+      // ★ description の自然表現に変換
+      const rawDescription = item.weather[0].description;
+      const translatedDescription = weatherDescriptionMap[rawDescription] || rawDescription;
+
       card.innerHTML = `
         <h4>${time}時</h4>
-        <img src="${iconUrl}" alt="${item.weather[0].description}" />
-        <p>${item.weather[0].description}</p>
+        <img src="${iconUrl}" alt="${translatedDescription}" />
+        <p>${translatedDescription}</p>
         <p>気温: ${item.main.temp.toFixed(1)}°C</p>
         <p>風速: ${item.wind.speed}m/s</p>
         <p>風向: ${windDir}</p>
