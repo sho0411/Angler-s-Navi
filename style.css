@@ -20,7 +20,6 @@ header {
   padding: 20px 40px;
 }
 
-/* ヘッダーを画面いっぱいに広げる */
 .header-wrapper {
   max-width: 100%;
   display: flex;
@@ -37,7 +36,6 @@ header h1 a {
   color: #fff;
 }
 
-/* ナビゲーション */
 nav ul {
   list-style: none;
   display: flex;
@@ -64,7 +62,6 @@ nav a.active {
   cursor: default;
 }
 
-/* フッター */
 footer {
   background-color: #1e3d59;
   color: #fff;
@@ -81,9 +78,7 @@ div h1 a {
 .logo-icon {
   height: 50px;
   vertical-align: middle;
-  /* 画像を縦中央揃えに設定 */
   margin-right: 5px;
-  /* 文字との間に余白 */
 }
 
 .hero-button {
@@ -130,9 +125,7 @@ div h1 a {
 .hero img {
   display: block;
   width: 100%;
-  /* 横幅はコンテナいっぱいに */
   height: auto;
-  /* 高さは自動でアスペクト比維持 */
   margin: 0 auto 30px;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -149,7 +142,6 @@ div h1 a {
   margin-top: 30px;
 }
 
-/* アプリ紹介セクション */
 .info-section {
   background-color: #fff;
   margin: 40px 0;
@@ -215,7 +207,6 @@ div h1 a {
 
 .about-image {
   width: 100%;
-  /* max-width: 600px; */
   margin: 0 auto;
 }
 
@@ -239,13 +230,9 @@ div h1 a {
 
 .about-text p {
   max-width: none;
-  /* ← 横幅制限解除 */
   white-space: nowrap;
-  /* ← 強制改行を禁止 */
   overflow-x: auto;
-  /* ← はみ出たらスクロールできるように */
   font-size: 1.5em;
-  /* ← ご希望の文字サイズ */
   color: #444;
   margin: 0 auto;
   text-align: center;
@@ -255,7 +242,6 @@ div h1 a {
 .features-section {
   width: 100%;
   padding: 80px 0;
-  /* ← 左右の余白をなくす */
   background-color: #fff;
 }
 
@@ -401,7 +387,6 @@ div h1 a {
 
 /* ========= search.html========= */
 
-/* 天気検索フォームのスタイル */
 #weather-form {
   display: flex;
   justify-content: center;
